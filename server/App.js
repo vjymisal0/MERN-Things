@@ -1,5 +1,18 @@
 const express = require("express")
+const mongoose = require("mongoose")
 const app = express()
+
+const DB = "mongodb+srv://vijay73:jBEyz0iwwocACTeo@cluster0.vwzq504.mongodb.net/"
+mongoose.connect(DB,
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useCreateIndex: true,
+        useFindAndModify: false
+    }
+).then(() => {
+    console.log("Connection successful")
+}).catch((err) => console.log("No connection"))
 
 const middleware = (req, res, next) => {
     console.log("Hello my middleware")
