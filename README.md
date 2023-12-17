@@ -39,7 +39,9 @@ List key features and functionalities of your project. Highlight the aspects tha
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-repository.git
-cd your-repository
+git clone https://github.com/vjymisal0/MERN-Things.git
+cd MERN Things
 
-This repository will be containing (practice) codes of MERN development
+
+..this repository is under progress!
+
