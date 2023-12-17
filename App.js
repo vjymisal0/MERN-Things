@@ -3,15 +3,13 @@ const dotenv = require("dotenv")
 const mongoose = require("mongoose")
 const app = express()
 
-const DB = "mongodb+srv://vijay73:jBEyz0iwwocACTeo@cluster0.vwzq504.mongodb.net/"
-mongoose.connect(DB,
-    {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useCreateIndex: true,
-        useFindAndModify: false
-    }
-).then(() => {
+
+dotenv.config({ path: './config.env' })
+
+const DB = process.env.DATABASE
+
+
+mongoose.connect(DB).then(() => {
     console.log("Connection successful")
 }).catch((err) => console.log("No connection"))
 
