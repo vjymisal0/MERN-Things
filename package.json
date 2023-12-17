@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/vjymisal0/MERN-Things/issues"
   },
-  "homepage": "https://github.com/vjymisal0/MERN-Things#readme"
+  "homepage": "https://github.com/vjymisal0/MERN-Things#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
