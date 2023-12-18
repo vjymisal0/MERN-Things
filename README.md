@@ -4,28 +4,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Short project description goes here.
-
-## Table of Contents
-
-- [Description](#description)
-- [Features](#features)
-- [Technologies](#technologies)
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Documentation](#api-documentation)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
-
-## Description
-
-Provide a detailed description of your project. Explain its purpose, features, and any other relevant information that will help users understand what your project is about.
-
-## Features
-
-List key features and functionalities of your project. Highlight the aspects that make your project unique or interesting.
-
 ## Technologies
 
 - **MongoDB:** Brief description of how MongoDB is used in your project.
@@ -34,13 +12,7 @@ List key features and functionalities of your project. Highlight the aspects tha
 - **Node.js:** Brief description of how Node.js is used in your project.
 - (Add any other relevant technologies)
 
-## Installation
 
-1. Clone the repository:
-
-```bash
-git clone https://github.com/vjymisal0/MERN-Things.git
-cd MERN Things
 
 
 ..this repository is under progress!
