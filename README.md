@@ -6,11 +6,11 @@
 
 ## Technologies
 
-- **MongoDB:** Brief description of how MongoDB is used in your project.
-- **Express.js:** Brief description of how Express.js is used in your project.
-- **React:** Brief description of how React is used in your project.
-- **Node.js:** Brief description of how Node.js is used in your project.
-- (Add any other relevant technologies)
+- **MongoDB:** 
+- **Express.js:** 
+- **React:** 
+- **Node.js:** 
+
 
 
 
