@@ -7,14 +7,16 @@ const app = express()
 dotenv.config({ path: './config.env' })
 
 require("./db/conn")
+const User = require("./model/userSchema")
 
 const PORT = process.env.PORT
 
+//middleware
 const middleware = (req, res, next) => {
     console.log("Hello my middleware")
     next()
 }
-// middleware()
+
 
 app.get('/', (req, res) => {
     res.send("Hello World")
@@ -36,6 +38,6 @@ app.get("/signup", (req, res) => {
     res.send("Signup form")
 })
 
-app.listen(3000, () => {
-    console.log("Server is running on port 3000")
+app.listen(PORT, () => {
+    console.log("Server is running on port 3000: click here-> http://localhost:3000")
 })
