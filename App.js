@@ -7,10 +7,15 @@ const app = express()
 dotenv.config({ path: './config.env' })
 
 require("./db/conn")
+const User = require("./model/userSchema")
 
 app.use(require('./routes/auth'))
 
-const User = require("./model/userSchema")
+app.use(express.json())
+
+
+
+
 
 const PORT = process.env.PORT
 
@@ -21,9 +26,9 @@ const middleware = (req, res, next) => {
 }
 
 
-app.get('/', (req, res) => {
-    res.send("Hello World")
-})
+// app.get('/', (req, res) => {
+//     res.send("Hello World")
+// })
 
 app.get("/about", middleware, (req, res) => {
     res.send("Hello World About")
@@ -44,3 +49,4 @@ app.get("/signup", (req, res) => {
 app.listen(PORT, () => {
     console.log("Server is running on port 3000: click here-> http://localhost:3000")
 })
+
