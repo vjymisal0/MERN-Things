@@ -6,10 +6,21 @@ server.get('/', (req, res) => {
 })
 
 
-server.get('/about', (req, res) => {
-    res.send("About Page")
-})
+// server.get('/about', (req, res) => {
+//     res.send("About Page")
+// })
 
+//middleware:->
+
+
+
+
+//API -ENDPOINTS
+
+server.patch('/', (req, res) => {
+    res.json({ type: 'PATCH' })
+}
+)
 
 server.listen(3000, () => {
     console.log("listening to port 3000 -> http://localhost:3000");
