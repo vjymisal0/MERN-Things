@@ -34,8 +34,7 @@ server.get('/', auth, (req, res) => {
     res.json({ type: 'GET' })
 }
 )
-
-server.post('/', (req, res) => {
+server.post('/register', auth, (req, res) => {
     res.json({ type: 'POST' })
 }
 )
