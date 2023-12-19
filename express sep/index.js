@@ -1,9 +1,9 @@
 const express = require('express');
 
 const server = express();
-server.get('/', (req, res) => {
-    res.send("Hello world from the server");
-})
+// server.get('/', (req, res) => {
+//     res.send("Hello world from the server");
+// })
 
 
 // server.get('/about', (req, res) => {
@@ -12,8 +12,8 @@ server.get('/', (req, res) => {
 
 //middleware:->
 
-server.use('/', (req, res) => {
-    console.log(req.get('User-Agent'))
+server.use((req, res, next) => {
+    console.log(req.method, req.ip, req.hostname, new Date(), req.get('User-Agent'))
     next();
 })
 
