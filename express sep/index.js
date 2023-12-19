@@ -12,10 +12,10 @@ const server = express();
 
 //middleware:->
 
-server.use((req, res, next) => {
-    console.log(req.method, req.ip, req.hostname, new Date(), req.get('User-Agent'))
-    next();
-}) //server level middleware
+// server.use((req, res, next) => {
+//     console.log(req.method, req.ip, req.hostname, new Date(), req.get('User-Agent'))
+//     next();
+// }) //server level middleware
 
 
 const auth = (req, res, next) => {
@@ -30,8 +30,8 @@ const auth = (req, res, next) => {
 
 //API -ENDPOINTS
 
-server.patch('/', (req, res) => {
-    res.json({ type: 'PATCH' })
+server.get('/', auth, (req, res) => {
+    res.json({ type: 'GET' })
 }
 )
 
