@@ -18,6 +18,16 @@ server.use((req, res, next) => {
 }) //server level middleware
 
 
+const auth = (req, res, next) => {
+    console.log(req.query)
+    if (req.query.password === '1234') {
+        next();
+    }
+    else {
+        res.status(401).send("You are not authenticated")
+    }
+}//route level middleware
+
 //API -ENDPOINTS
 
 server.patch('/', (req, res) => {
