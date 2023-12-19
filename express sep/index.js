@@ -15,7 +15,8 @@ const server = express();
 server.use((req, res, next) => {
     console.log(req.method, req.ip, req.hostname, new Date(), req.get('User-Agent'))
     next();
-})
+}) //server level middleware
+
 
 //API -ENDPOINTS
 
