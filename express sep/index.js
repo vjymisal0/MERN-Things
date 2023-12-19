@@ -35,6 +35,22 @@ server.get('/', auth, (req, res) => {
 }
 )
 
+server.post('/', (req, res) => {
+    res.json({ type: 'POST' })
+}
+)
+
+server.put('/', (req, res) => {
+    res.json({ type: 'PUT' })
+}
+)
+
+server.delete('/', (req, res) => {
+    res.json({ type: 'DELETE' })
+}
+)
+
+
 server.listen(3000, () => {
     console.log("listening to port 3000 -> http://localhost:3000");
 }
