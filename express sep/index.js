@@ -1,8 +1,13 @@
 const express = require('express');
 
 const server = express();
-server.get('/', (req, res) => { 
+server.get('/', (req, res) => {
     res.send("Hello world from the server");
+})
+
+
+server.get('/about', (req, res) => {
+    res.send("About Page")
 })
 
 
