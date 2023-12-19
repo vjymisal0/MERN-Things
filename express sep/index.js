@@ -12,8 +12,10 @@ server.get('/', (req, res) => {
 
 //middleware:->
 
-
-
+server.use('/', (req, res) => {
+    console.log(req.get('User-Agent'))
+    next();
+})
 
 //API -ENDPOINTS
 
