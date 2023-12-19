@@ -39,7 +39,7 @@ server.post('/register', auth, (req, res) => {
 }
 )
 
-server.put('/', (req, res) => {
+server.put('/login',auth, (req, res) => {
     res.json({ type: 'PUT' })
 }
 )
