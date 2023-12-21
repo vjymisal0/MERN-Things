@@ -1,6 +1,7 @@
 const express = require('express');
-
+const morgan = require('morgan');
 const server = express();
+
 // server.get('/', (req, res) => {
 //     res.send("Hello world from the server");
 // })
@@ -18,15 +19,16 @@ const server = express();
 // }) //server level middleware
 
 
-const auth = (req, res, next) => {
-    console.log(req.query)
-    if (req.query.password === '1234') {
-        next();
-    }
-    else {
-        res.status(401).send("You are not authenticated")
-    }
-}//route level middleware
+// const auth = (req, res, next) => {
+//     console.log(req.query)
+//     if (req.query.password === '1234') {
+//         next();
+//     }
+//     else {
+//         res.status(401).send("You are not authenticated")
+//     }
+// }
+//route level middleware
 
 //API -ENDPOINTS
 
@@ -39,7 +41,7 @@ server.post('/register', auth, (req, res) => {
 }
 )
 
-server.put('/login',auth, (req, res) => {
+server.put('/login', auth, (req, res) => {
     res.json({ type: 'PUT' })
 }
 )
