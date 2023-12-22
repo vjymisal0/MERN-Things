@@ -6,7 +6,6 @@ const server = express();
 //     res.send("Hello world from the server");
 // })
 
-
 // server.get('/about', (req, res) => {
 //     res.send("About Page")
 // })
@@ -19,20 +18,22 @@ const server = express();
 // }) //server level middleware
 
 
-// const auth = (req, res, next) => {
-//     console.log(req.query)
-//     if (req.query.password === '1234') {
-//         next();
-//     }
-//     else {
-//         res.status(401).send("You are not authenticated")
-//     }
-// }
+const auth = (req, res, next) => {
+    // console.log(req.query)
+    // if (req.query.password === '1234') {
+    //     next();
+    // }
+    // else {
+    //     res.status(401).send("You are not authenticated")
+    // }
+    next();
+}
 //route level middleware
 
 //API -ENDPOINTS
 
-server.get('/', auth, (req, res) => {
+server.get('/product/id', auth, (req, res) => {
+    console.log(id)
     res.json({ type: 'GET' })
 }
 )
